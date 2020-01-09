@@ -3,14 +3,12 @@
 
 # README
 # loop is the number of image files you would want to download from the site
-# sleep is for delay, by default 1 second delay in the code, you can change the value to any time in seconds.
-
+# sleep is for delay, by default 200 millisecond delay in the code, you can change the value to any time in seconds.
 
 #INTRODUCTION TO THE PROGRAM
 
 print("This is a program to download pictures from the website thispersondoesnotexist.com \n")
 print("Written by Satish Luintel. github -> satishluintel \n")
-
 
 # CODE STARTS HERE
 # THIS CODE DOWNLOADS 4999 IMAGES.
