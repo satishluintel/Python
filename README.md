@@ -13,5 +13,7 @@ Usage : scrape_non_existent_profile_images.py (and press enter in console, the i
 These are the images hosted in producthunt.com, start the loop from 1 to n.
 
 3. profiles.py
-Download all the profile pictures of the group members in Telegram and save them according to their IDs and Usernames. 
+Download all the profile pictures of the group members in Telegram and save them according to their IDs and Usernames.
+
+4. Automated Screenshot Recording for exfiltration purposes
 
