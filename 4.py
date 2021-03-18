@@ -38,13 +38,40 @@ while True:
     filename = "Ubuntu_bionic_x64_"+ date_data_to_system + "_.png"
     image = pyautogui.screenshot(filename)
 
-    # reduce the size of the screenshot to save disk space    
+    # reduce the size of the screenshot to save disk space
+    # for a High Quality Image , increase the depth to 7-8. File size will be large in such case.
     try:
-        os.system(f"convert -depth 2.7 {filename} {filename}")
+        os.system(f"convert -depth 3.6 {filename} {filename}")
     except Exception as e:
         print(e)
     
-    time.sleep(7)
+    # change the file such that automated tools do not find it.
+    try:
+        f = open(filename,"rb")
+        a = f.read()
+        f.close()
+
+        intermediate = list(a)
+        
+        # our secret extension, say, TSC
+        intermediate[1] = 80 #84
+        intermediate[2] = 78 #83
+        intermediate[3] = 71 #67
+
+        print(intermediate)
+        immut = bytes(intermediate)
+
+        with open(filename,"wb") as bin_file:
+            bin_file.write(immut)
+        
+        filename_new =  "Ubuntu_bionic_x64_"+ date_data_to_system + ".TSC"
+        os.system(f"mv {filename} {filename_new}")
+
+    except Exception as e:
+        print("Something happened...!")
+
+    # taking screenshots in a 10 second interval 
+    time.sleep(10)
     
 
     """
