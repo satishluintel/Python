@@ -17,3 +17,5 @@ Download all the profile pictures of the group members in Telegram and save them
 
 4. Automated Screenshot Recording for exfiltration purposes
 
+5. Python Flask log4j request drop
+
